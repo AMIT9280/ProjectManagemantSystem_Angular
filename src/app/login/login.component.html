@@ -1,8 +1,55 @@
-<h1>login</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-Email : <input type="text"><br><br>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        
 
-Password : <input type="password"><br><br>
- 
-<input type="submit" value="Login"><br><br>
-<a href="signup">signup</a>
+        form {
+
+            height: 200px;
+            width: 300px;
+            border: 2px solid black;
+            margin: 150px 0px 0px 350px;
+            text-align: center;
+            color: yellow;
+            background-color: red;
+        }
+
+        input {
+            color: black;
+            background-color: bisque;
+        }
+
+        .btn input {
+            color: yellow;
+            text-align: center;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; color: red;">Welcome To Project Management System</h1>
+    
+        <h1>Login</h1>
+        <div>
+            Email id : <input type="email" placeholder="Email id" name="Email id" [(ngModel)]="email">
+        </div>
+        <br>
+        <div>
+            password : <input type="password" placeholder="password" name="password" [(ngModel)]="password">
+        </div>
+        <br>
+        <div class="btn">
+            <input type="button" placeholder="Login" value="Login" (click)="login"/>
+        </div>
+        <a routerLink="/signup" style="color: yellow;">Signup</a>
+     
+</body>
+
+</html>
