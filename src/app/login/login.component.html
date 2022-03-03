@@ -9,7 +9,7 @@
     <style>
         
 
-        form {
+        .container {
 
             height: 200px;
             width: 300px;
@@ -35,7 +35,7 @@
 
 <body>
     <h1 style="text-align: center; color: red;">Welcome To Project Management System</h1>
-    
+    <div class="container"> 
         <h1>Login</h1>
         <div>
             Email id : <input type="email" placeholder="Email id" name="Email id" [(ngModel)]="email">
@@ -49,7 +49,7 @@
             <input type="button" placeholder="Login" value="Login" (click)="login"/>
         </div>
         <a routerLink="/signup" style="color: yellow;">Signup</a>
-     
+    </div>
 </body>
 
 </html>

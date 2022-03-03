@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
     <style>
-        form {
+
+        .container{
 
             text-align: center;
             margin: 100px 0px 0px 300px;
@@ -28,7 +29,8 @@
 
 <body>
     <h1 style="text-align: center; color: red;">Welcome To Project Management System</h1>
-         <h1>Signup</h1>
+    <div class="container">
+        <h1>Signup</h1>
         <div>
             FirstName : <input placeholder="First Name" type="text" [(ngModel)]="firstName">
         </div>
@@ -42,9 +44,11 @@
         </div>
         <br>
         <div class="btn">
-            <input type="button" value="Signup" name="submit" (click)="saveUser()"/>
+            <input type="button" value="Signup" name="submit" (click)="saveUser()" />
         </div>
         <a routerLink="/login" style="color: yellow;">Login</a>
- </body>
+    </div>
+
+</body>
 
 </html>

@@ -22,7 +22,7 @@ export class SignupComponent implements OnInit {
     console.log(this.firstName);
     console.log(this.email);
     console.log(this.password);
-    let user={firstName:this.firstName,email:this.email,password:this.password,role:"620df453d44b073ae05f5587"}
+    let user={firstName:this.firstName,email:this.email,password:this.password,role:"6219063da551ae3f022478fc"}
     this.sessionService.saveUser(user).subscribe(resp=>{
         console.log(resp);
         
