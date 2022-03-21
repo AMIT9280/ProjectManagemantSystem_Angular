@@ -13,11 +13,14 @@ export class SessionService {
   //HttpClient ---> Method
 
   saveUser(user:any):Observable<any>{
-      console.log(user);
       //node api
-      return this.HttpClient.post("http://localhost:3000/users",user)
+      return this.HttpClient.post("http://localhost:3000/savedevloper",user)
   }
-  authenticate(user:any){
-    console.log(user);
+  authenticate(user:any):Observable<any>{
+      return this.HttpClient.post("http://localhost:3000/login",user)
+  }
+  saveCustomer(user:any):Observable<any>{
+      return this.HttpClient.post("http://localhost:3000/savedevloper",user)
+    
   }
 }

@@ -11,6 +11,8 @@ export class SignupComponent implements OnInit {
   firstName:string=""
   email:string=""
   password:string=""
+  gender:string=""
+  contactNum:string=""
 
 
   constructor(private sessionService:SessionService) { }
@@ -22,6 +24,10 @@ export class SignupComponent implements OnInit {
     console.log(this.firstName);
     console.log(this.email);
     console.log(this.password);
+    console.log(this.gender);
+    console.log(this.contactNum);
+    
+    
     let user={firstName:this.firstName,email:this.email,password:this.password,role:"6219063da551ae3f022478fc"}
     this.sessionService.saveUser(user).subscribe(resp=>{
         console.log(resp);

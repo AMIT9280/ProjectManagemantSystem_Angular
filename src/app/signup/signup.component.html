@@ -14,7 +14,7 @@
             margin: 100px 0px 0px 300px;
             border: 2px solid black;
             width: 350px;
-            height: 300px;
+            height: 350px;
             color: yellow;
             background-color: red;
         }
@@ -43,9 +43,20 @@
             Password : <input type="password" placeholder="password" [(ngModel)]="password">
         </div>
         <br>
+        <div>
+            Gender:
+            Male<input type="radio" name="Gender" value="Male" [(ngModel)]="gender">
+            Female<input type="radio" name="Gender" value="Female" [(ngModel)]="gender">
+        </div>
+        <br>
+        <div>
+            Contact Number: <input type="text" placeholder="Contact Number" [(ngModel)]="contactNum">
+        </div>
+        <br>    
         <div class="btn">
             <input type="button" value="Signup" name="submit" (click)="saveUser()" />
         </div>
+        <br>
         <a routerLink="/login" style="color: yellow;">Login</a>
     </div>
 

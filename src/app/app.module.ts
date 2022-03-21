@@ -12,6 +12,9 @@ import { ListRoleComponent } from './admin/list-role/list-role.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { AddCatagoryComponent } from './admin/add-catagory/add-catagory.component';
+import { EditRoleComponent } from './admin/edit-role/edit-role.component';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { VendorDashboardComponent } from './vendor/vendor-dashboard/vendor-dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,10 @@ import { AddCatagoryComponent } from './admin/add-catagory/add-catagory.componen
     AddRoleComponent,
     AdminHeaderComponent,
     ListRoleComponent,
-    AddCatagoryComponent
+    AddCatagoryComponent,
+    EditRoleComponent,
+    AdminDashboardComponent,
+    VendorDashboardComponent
   ],
   imports: [
     BrowserModule,
