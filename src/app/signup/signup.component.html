@@ -1,65 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
-    <style>
-
-        .container{
-
-            text-align: center;
-            margin: 100px 0px 0px 300px;
-            border: 2px solid black;
-            width: 350px;
-            height: 350px;
-            color: yellow;
-            background-color: red;
-        }
-
-        .btn input {
-
-            color: yellow;
-            background-color: red;
-        }
-    </style>
-</head>
-
-<body>
-    <h1 style="text-align: center; color: red;">Welcome To Project Management System</h1>
+<div class="authentication">
     <div class="container">
-        <h1>Signup</h1>
-        <div>
-            FirstName : <input placeholder="First Name" type="text" [(ngModel)]="firstName">
+        <div class="col-md-12 content-center">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="company_detail">
+                        <h4 class="logo"><img src="assets/images/logo.svg" alt=""> Golden Chance</h4>
+                        <h3>The ultimate <strong>Bootstrap 4</strong> Admin Dashboard</h3>
+                        <p>Alpino is fully based on HTML5 + CSS3 Standards. Is fully responsive and clean on every device and every browser</p>                        
+                        <div class="footer">
+                            <ul class="social_link list-unstyled">
+                                <li><a href="https://thememakker.com" title="ThemeMakker"><i class="zmdi zmdi-globe"></i></a></li>
+                                <li><a href="https://themeforest.net/user/thememakker" title="Themeforest"><i class="zmdi zmdi-shield-check"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/thememakker/" title="LinkedIn"><i class="zmdi zmdi-linkedin"></i></a></li>
+                                <li><a href="https://www.facebook.com/thememakkerteam" title="Facebook"><i class="zmdi zmdi-facebook"></i></a></li>
+                                <li><a href="http://twitter.com/thememakker" title="Twitter"><i class="zmdi zmdi-twitter"></i></a></li>
+                                <li><a href="http://plus.google.com/+thememakker" title="Google plus"><i class="zmdi zmdi-google-plus"></i></a></li>
+                                <li><a href="https://www.behance.net/thememakker" title="Behance"><i class="zmdi zmdi-behance"></i></a></li>
+                            </ul>
+                            <hr>
+                            <ul>
+                                <li><a href="http://thememakker.com/contact/" target="_blank">Contact Us</a></li>
+                                <li><a href="http://thememakker.com/about/" target="_blank">About Us</a></li>
+                                <li><a href="http://thememakker.com/services/" target="_blank">Services</a></li>
+                                <li><a href="javascript:void(0);">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="col-lg-5 col-md-12 offset-lg-1">
+                    <div class="card-plain">
+                        <div class="header">
+                            <h5>Sign Up</h5>
+                            <span>Register a new membership</span>
+                        </div>                            
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter User Name" [(ngModel)]="firstName">
+                                <span class="input-group-addon"><i class="zmdi zmdi-account-circle"></i></span>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter Email" [(ngModel)]="email">
+                                <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter Contact Number" [(ngModel)]="contactNum">
+                                <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+                            </div>
+                            <div class="input-group">
+                                <input type="password" placeholder="Password" class="form-control" [(ngModel)]="password">
+                                <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+                            </div>
+                            <div class="input-group">
+                                <h6 style="color: gray;margin: -3px 0px 0px 20px;">Gender : </h6>  
+                                         <h6 style="color: black; margin: -3px -30px 0px 5px;">Male</h6><input type="radio" name="Gender" value="Male" placeholder="male" class="form-control" [(ngModel)]="gender">
+                                         <h6 style="color: black; margin: -3px -30px 0px -15px;">Female</h6><input type="radio" name="Gender" value="Female" placeholder="Female" class="form-control" [(ngModel)]="gender">
+    
+                            </div>
+                            <div class="checkbox">
+                                <input id="terms" type="checkbox">
+                                <label for="terms">I read and Agree to the <a href="javascript:void(0);">Terms of Usage</a></label>
+                            </div>                            
+                        <div class="footer">
+                            <button (click)="saveUser()" class="btn btn-primary btn-round btn-block">SIGN UP</button>
+                        </div>
+                        <a class="link" routerLink="/login">You already have a membership?</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <br>
-        <div>
-            Email : <input type="text" placeholder="Email id" [(ngModel)]="email">
-        </div>
-        <br>
-        <div>
-            Password : <input type="password" placeholder="password" [(ngModel)]="password">
-        </div>
-        <br>
-        <div>
-            Gender:
-            Male<input type="radio" name="Gender" value="Male" [(ngModel)]="gender">
-            Female<input type="radio" name="Gender" value="Female" [(ngModel)]="gender">
-        </div>
-        <br>
-        <div>
-            Contact Number: <input type="text" placeholder="Contact Number" [(ngModel)]="contactNum">
-        </div>
-        <br>    
-        <div class="btn">
-            <input type="button" value="Signup" name="submit" (click)="saveUser()" />
-        </div>
-        <br>
-        <a routerLink="/login" style="color: yellow;">Login</a>
     </div>
-
-</body>
-
-</html>
+</div>

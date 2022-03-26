@@ -20,7 +20,9 @@ export class SessionService {
       return this.HttpClient.post("http://localhost:3000/login",user)
   }
   saveCustomer(user:any):Observable<any>{
-      return this.HttpClient.post("http://localhost:3000/savedevloper",user)
-    
+      return this.HttpClient.post("http://localhost:3000/savedevloper",user) 
+  }
+  sendOtpForPassword(user:any):Observable<any>{
+    return this.HttpClient.post("http://localhost:3000/sendOtpForPassword",user)
   }
 }

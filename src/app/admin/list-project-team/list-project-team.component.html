@@ -1,0 +1,18 @@
+<app-admin-header></app-admin-header>
+ <table border="1">
+    <thead>
+        <tr>
+            <!-- <th>RoleId</th> -->
+            <th>ProjectTeamName</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr *ngFor="let  p of projectTeam">
+            <!-- <td>{{role._id}}</td> -->
+            <td>{{p.ProjectTeamName}}</td>
+            <td><button (click)="deleteProjectTeam(p._id)">Delete</button></td>
+        </tr>
+    </tbody>
+ </table>

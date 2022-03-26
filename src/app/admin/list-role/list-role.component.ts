@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { CommonService } from 'src/app/common.service';
 import { RoleService } from '../role.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { RoleService } from '../role.service';
 })
 export class ListRoleComponent implements OnInit {
   roles:Array<any> = []
-  constructor(private roleService:RoleService,private tsService:ToastrService,private router:Router) { 
+  constructor(private roleService:RoleService,private cm:CommonService) { 
   console.log("List Roles");
 }
   ngOnInit(): void {
@@ -19,16 +20,16 @@ export class ListRoleComponent implements OnInit {
   deleteRole(roleId:any){
     this.roleService.deleteRole(roleId).subscribe(resp=>{
       if(resp.status == 200 ){
-          this.tsService.success("",resp.msg,{timeOut:3000});
+          this.cm.tsService.success("",resp.msg,{timeOut:3000});
           this.getAllRoles() 
       }else{
-        this.tsService.error("",resp.msg,{timeOut:3000})
+        this.cm.tsService.error("",resp.msg,{timeOut:3000})
       }
     })
 }
 
 editRole(roleId:any){
-this.router.navigateByUrl("/editrole/"+roleId)
+this.cm.router.navigateByUrl("/editrole/"+roleId)
 
 }
 

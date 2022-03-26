@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { SessionService } from '../session.service';
 
@@ -17,12 +17,17 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
   login(){
     let user = {email:this.email,password:this.password}
+    console.log(user);
+    
     this.sessionService.authenticate(user).subscribe(resp=>{
       if(resp.status == 200){
+
           this.tsService.success("",resp.msg,{timeOut:3000})
+          localStorage.setItem("firstName",resp.data.firstName)
+          this.router.navigateByUrl("/admin/adminDashboard")
           console.log(resp);
       }else{
           

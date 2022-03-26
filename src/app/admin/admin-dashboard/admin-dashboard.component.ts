@@ -10,6 +10,8 @@ export class AdminDashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.firstName=localStorage.getItem("firstName") as string
   }
+  firstName:string=""
 
 }

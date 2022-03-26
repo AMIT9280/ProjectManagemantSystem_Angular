@@ -1,0 +1,15 @@
+<app-admin-header></app-admin-header>
+ 
+firstName <input type="text" [(ngModel)]="firstName">
+<br><br>
+Email <input type="text" [(ngModel)]="email">
+<br><br>
+Password <input type="text" [(ngModel)]="password">
+<br><br>
+Gender : Male<input type="radio" name="Gender" value="Male" [(ngModel)]="gender">
+         Female<input type="radio" name="Gender" value="Female" [(ngModel)]="gender">
+<br><br>
+Contact Number <input type="text" [(ngModel)]="contactNUm">
+<br><br>
+
+<input type="button" value="AddUser" (click)="saveUser()">
