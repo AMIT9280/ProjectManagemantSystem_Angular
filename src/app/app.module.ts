@@ -37,6 +37,7 @@ import { AdminlayoutComponent } from './admin/adminlayout/adminlayout.component'
 import { AddProjectComponent } from './admin/add-project/add-project.component';
 import { AddProjectTeamComponent } from './admin/add-project-team/add-project-team.component';
 import { ForgetpasswordComponent } from './admin/forgetpassword/forgetpassword.component';
+import { ChangepasswordComponent } from './admin/changepassword/changepassword.component';
  
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { ForgetpasswordComponent } from './admin/forgetpassword/forgetpassword.c
     AdminlayoutComponent,
     AddProjectComponent,
     AddProjectTeamComponent,
-    ForgetpasswordComponent
+    ForgetpasswordComponent,
+    ChangepasswordComponent
   ],
   imports: [
     BrowserModule,

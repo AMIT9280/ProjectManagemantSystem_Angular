@@ -13,7 +13,7 @@ export class ProjectTeamService {
    }
  
    getAllProjectTeam():Observable<any>{
-     return this.hc.get("http://localhost:3000/projectTeam")
+     return this.hc.get("http://localhost:3000/getAllprojectTeamMemberBy")
    }
    deleteProjectTeam(projectTeamId:any):Observable<any>{
      return this.hc.delete("http://localhost:3000/projectTeam/"+projectTeamId)

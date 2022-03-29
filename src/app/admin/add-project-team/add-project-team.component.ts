@@ -15,7 +15,7 @@ export class AddProjectTeamComponent implements OnInit {
   ngOnInit(): void {
   }
   saveProjectTeam(){
-    let projectTeam ={projectId:this.projectId}
+    let projectTeam ={projectId:this.projectId,userId:this.userId}
     this.pts.addProjectTeam(projectTeam).subscribe(resp=>{
       console.log(resp);
       if(resp.status == 200){
@@ -23,7 +23,7 @@ export class AddProjectTeamComponent implements OnInit {
         this.cm.tsService.success("",resp.msg,{
           timeOut:3000
         })
-        this.cm.router.navigateByUrl("/listProjectTeam")
+        this.cm.router.navigateByUrl("/getAllprojectTeamMemberBy")
       }else{
 
       }

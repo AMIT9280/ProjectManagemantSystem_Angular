@@ -44,6 +44,7 @@ const routes: Routes = [
 //project-Team
 {path:"AddProjectTeam",component:AddProjectTeamComponent},
 {path:"listProjectTeam",component:ListProjectTeamComponent},
+{path:"getAllprojectTeamMemberBy",component:ListProjectTeamComponent},
 {path:"editprojectTeam/:projectTeamId",component:EditProjectTeamComponent},
 //admin
 {path:"admin",component:AdminlayoutComponent,children:[{path:"adminDashboard",component:AdminDashboardComponent}]},

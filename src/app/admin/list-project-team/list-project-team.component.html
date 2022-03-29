@@ -9,10 +9,11 @@
     </thead>
     <tbody>
         
-        <tr *ngFor="let  p of projectTeam">
+        <tr *ngFor="let  projectTeam of projectTeam">
             <!-- <td>{{role._id}}</td> -->
-            <td>{{p.ProjectTeamName}}</td>
-            <td><button (click)="deleteProjectTeam(p._id)">Delete</button></td>
+            <td>{{projectTeam.projectTitle}}</td>
+            <td><button (click)="editProjectTeam(projectTeam._id)">Add Member</button></td>
+            <td><button (click)="deleteProjectTeam(projectTeam._id)">Delete</button></td>
         </tr>
     </tbody>
  </table>
