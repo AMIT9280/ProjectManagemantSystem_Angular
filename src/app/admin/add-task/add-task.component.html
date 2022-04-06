@@ -1,0 +1,19 @@
+<app-admin-header></app-admin-header>
+ 
+ModuleId <input type="text" [(ngModel)]="moduleId">
+<br><br>
+ProjectId <input type="text" [(ngModel)]="projectId">
+<br><br>
+Title<input type="text" [(ngModel)]="title">
+<br><br>
+Priority <input type="text" [(ngModel)]="priority">
+<br><br>
+Description <input type="text" [(ngModel)]="description">
+<br><br>
+StatusId <input type="text" [(ngModel)]="statusId">
+<br><br>
+TotalMinutes <input type="text" [(ngModel)]="totalMinutes">
+<br><br>
+
+
+<input type="button" value="AddTask" (click)="saveTask()">

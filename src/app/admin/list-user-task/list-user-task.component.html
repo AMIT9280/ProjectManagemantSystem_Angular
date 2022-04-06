@@ -1,1 +1,19 @@
-<p>list-user-task works!</p>
+<app-admin-header></app-admin-header>
+ <table border="1">
+    <thead>
+        <tr>
+            <!-- <th>RoleId</th> -->
+           
+           
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of UserTask">
+            <!-- <td>{{role._id}}</td> -->
+            <td>{{u.Status}}</td>
+            <td> <button (click)="editUserTask(u._id)">Edit</button> | <button (click)="deleteUserTask(u._id)">Delete</button></td>
+        </tr>
+    </tbody>
+ </table>

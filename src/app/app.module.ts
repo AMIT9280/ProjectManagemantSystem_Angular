@@ -38,6 +38,10 @@ import { AddProjectComponent } from './admin/add-project/add-project.component';
 import { AddProjectTeamComponent } from './admin/add-project-team/add-project-team.component';
 import { ForgetpasswordComponent } from './admin/forgetpassword/forgetpassword.component';
 import { ChangepasswordComponent } from './admin/changepassword/changepassword.component';
+import { AddStatusComponent } from './admin/add-status/add-status.component';
+import { AddProjectModuleComponent } from './admin/add-project-module/add-project-module.component';
+import { AddTaskComponent } from './admin/add-task/add-task.component';
+import { AddUserTaskComponent } from './admin/add-user-task/add-user-task.component';
  
 @NgModule({
   declarations: [
@@ -73,7 +77,11 @@ import { ChangepasswordComponent } from './admin/changepassword/changepassword.c
     AddProjectComponent,
     AddProjectTeamComponent,
     ForgetpasswordComponent,
-    ChangepasswordComponent
+    ChangepasswordComponent,
+    AddStatusComponent,
+    AddProjectModuleComponent,
+    AddTaskComponent,
+    AddUserTaskComponent
   ],
   imports: [
     BrowserModule,

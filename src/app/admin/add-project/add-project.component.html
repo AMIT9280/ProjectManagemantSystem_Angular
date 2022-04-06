@@ -1,1 +1,16 @@
-<p>add-project works!</p>
+<app-admin-header></app-admin-header>
+ 
+projectTitle <input type="text" [(ngModel)]="projectTitle">
+<br><br>
+description <input type="text" [(ngModel)]="description">
+<br><br>
+technology <input type="text" [(ngModel)]="technology">
+<br><br>
+estimatedHours <input type="text" [(ngModel)]="estimatedHours">
+<br><br>
+startDate <input type="text" [(ngModel)]="startDate">
+<br><br>
+completionDate <input type="text"  [(ngModel)]="completionDate" >
+<br><br>
+
+<input type="button" value="AddProject" (click)="saveProject()">

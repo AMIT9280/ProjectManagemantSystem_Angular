@@ -18,6 +18,18 @@ import { AddProjectTeamComponent } from './admin/add-project-team/add-project-te
 import { ListProjectTeamComponent } from './admin/list-project-team/list-project-team.component';
 import { EditProjectTeamComponent } from './admin/edit-project-team/edit-project-team.component';
 import { ForgetpasswordComponent } from './admin/forgetpassword/forgetpassword.component';
+import { AddStatusComponent } from './admin/add-status/add-status.component';
+import { ListStatusComponent } from './admin/list-status/list-status.component';
+import { EditStatusComponent } from './admin/edit-status/edit-status.component';
+import { AddProjectModuleComponent } from './admin/add-project-module/add-project-module.component';
+import { ListProjectModuleComponent } from './admin/list-project-module/list-project-module.component';
+import { EditProjectModuleComponent } from './admin/edit-project-module/edit-project-module.component';
+import { AddTaskComponent } from './admin/add-task/add-task.component';
+import { ListTaskComponent } from './admin/list-task/list-task.component';
+import { EditTaskComponent } from './admin/edit-task/edit-task.component';
+import { AddUserTaskComponent } from './admin/add-user-task/add-user-task.component';
+import { ListUserTaskComponent } from './admin/list-user-task/list-user-task.component';
+import { EditUserTaskComponent } from './admin/edit-user-task/edit-user-task.component';
 
 const routes: Routes = [
 
@@ -46,6 +58,31 @@ const routes: Routes = [
 {path:"listProjectTeam",component:ListProjectTeamComponent},
 {path:"getAllprojectTeamMemberBy",component:ListProjectTeamComponent},
 {path:"editprojectTeam/:projectTeamId",component:EditProjectTeamComponent},
+//Status
+{path:"AddStatus",component:AddStatusComponent},
+{path:"listStatus",component:ListStatusComponent},
+{path:"getAllStatus",component:ListStatusComponent},
+{path:"editStatus/:StatusId",component:EditStatusComponent},
+
+//project-MOdule
+{path:"AddProjectMOdule",component:AddProjectModuleComponent},
+{path:"listProjectMOdule",component:ListProjectModuleComponent},
+{path:"getAllProjectMOduleMemberBy",component:ListProjectModuleComponent},
+{path:"editProjectMOdule/:projectMOduleId",component:EditProjectModuleComponent},
+
+//Task
+{path:"AddTask",component:AddTaskComponent},
+{path:"listTask",component:ListTaskComponent},
+{path:"getAllTask",component:ListTaskComponent},
+{path:"editTask/:TaskId",component:EditTaskComponent},
+
+//USerTask
+{path:"AddUserTask",component:AddUserTaskComponent},
+{path:"listUserTask",component:ListUserTaskComponent},
+{path:"getAllUserTask",component:ListUserTaskComponent},
+{path:"editUserTask/:UserTaskId",component:EditUserTaskComponent},
+
+
 //admin
 {path:"admin",component:AdminlayoutComponent,children:[{path:"adminDashboard",component:AdminDashboardComponent}]},
 ];

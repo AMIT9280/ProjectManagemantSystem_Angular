@@ -1,1 +1,17 @@
-<p>list-status works!</p>
+<app-admin-header></app-admin-header>
+ <table border="1">
+    <thead>
+        <tr>
+            <!-- <th>RoleId</th> -->
+            <th>StatusName</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of status">
+            <!-- <td>{{role._id}}</td> -->
+            <td>{{s.statudId}}</td>
+            <td> <button (click)="editStatus(s._id)">Edit</button> | <button (click)="deleteStatus(s._id)">Delete</button></td>
+        </tr>
+    </tbody>
+ </table>

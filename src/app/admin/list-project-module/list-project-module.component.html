@@ -1,1 +1,27 @@
-<p>list-project-module works!</p>
+<app-admin-header></app-admin-header>
+ <table border="1">
+    <thead>
+        <tr>
+            <!-- <th>RoleId</th> -->
+            <th>ModuleName</th>
+            <th>Description</th>
+            <th>EstimatedHours</th>
+            <th>Status</th>
+            <th>startDate</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr *ngFor="let  p of projectMOdule">
+            
+            <td>{{p.moduleName}}</td>
+            <td>{{p.description}}</td>
+            <td>{{p.estimatedHours}}</td>
+            <td>{{p.status}}</td>
+            <td>{{p.startDate}}</td>
+            <td><button (click)="editProjectMOdule(p._id)">Edit</button></td>
+            <td><button (click)="deleteProjectMOdule(p._id)">Delete</button></td>
+        </tr>
+    </tbody>
+ </table>

@@ -1,1 +1,30 @@
-<p>list-project works!</p>
+<app-admin-header></app-admin-header>
+ <table border="1">
+    <thead>
+        <tr>
+            <!-- <th>RoleId</th> -->
+            <th>projectTitle</th>
+            <th>description</th>
+            <th>technology</th>
+            <th>estimatedHours</th>
+            <th>startDate</th>
+            <th>completionDate</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr *ngFor="let  pr of projects">
+            <!-- <td>{{role._id}}</td> -->
+            <td>{{pr.projectTitle}}</td>
+            <td>{{pr.description}}</td>
+            <td>{{pr.technology}}</td>
+            <td>{{pr.estimatedHours}}</td>
+            <td>{{pr.startDate}}</td>
+            <td>{{pr.completionDate}}</td>
+
+            <td><button (click)="editProject(pr._id)">Edit</button></td>
+            <td><button (click)="deleteProject(pr._id)">Delete</button></td>
+        </tr>
+    </tbody>
+ </table>

@@ -1,0 +1,16 @@
+<app-admin-header></app-admin-header>
+ 
+ProjectId <input type="text" [(ngModel)]="projectId">
+<br><br>
+ModuleName <input type="text" [(ngModel)]="moduleName">
+<br><br>
+Description <input type="text" [(ngModel)]="description">
+<br><br>
+EstimatedHours <input type="text" [(ngModel)]="estimatedHours">
+<br><br>
+status <input type="text" [(ngModel)]="status">
+<br><br>
+startDate <input type="text" [(ngModel)]="startDate">
+<br><br>
+
+<input type="button" value="AddProjectMOdule" (click)="saveProjectMOdule()">

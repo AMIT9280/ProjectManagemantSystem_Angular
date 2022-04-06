@@ -39,7 +39,5 @@ this.roleService.getAllRoles().subscribe(resp=>{
    this.roles =  resp.data 
   }) 
 }
-
-
 }
 

@@ -39,6 +39,8 @@ export class ListProjectTeamComponent implements OnInit {
       else {
         this.cm.tsService.success(resp.msg, "", { timeOut: 3000 })
         this.projectTeam = resp.data
+        console.log("------------");
+        
         console.log(this.projectTeam);
       }
     })

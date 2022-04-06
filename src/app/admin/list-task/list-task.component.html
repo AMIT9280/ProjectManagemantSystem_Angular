@@ -1,1 +1,23 @@
-<p>list-task works!</p>
+<app-admin-header></app-admin-header>
+ <table border="1">
+    <thead>
+        <tr>
+            <!-- <th>RoleId</th> -->
+            <th>Title</th>
+            <th>Priority</th>
+            <th>Description</th>
+            <th>TotalMinutes</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let t of task">
+            <!-- <td>{{role._id}}</td> -->
+            <td>{{t.title}}</td>
+            <td>{{t.priority}}</td>
+            <td>{{t.description}}</td>
+            <td>{{t.totalMinutes}}</td>
+            <td> <button (click)="editTask(t._id)">Edit</button> | <button (click)="deleteTask(t._id)">Delete</button></td>
+        </tr>
+    </tbody>
+ </table>
